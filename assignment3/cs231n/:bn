@@ -137,27 +137,12 @@ class CaptioningRNN(object):
         # defined above to store loss and gradients; grads[k] should give the      #
         # gradients for self.params[k].                                            #
         ############################################################################
-        N, D = features.shape
+        N, H = W_proj.shape
         tmp1 = features.dot(W_proj) + b_proj
-        tmp2, cache2 = word_embedding_forward(captions_in, W_embed)
+        tmp2, cache2 = word_embedding_forward(captions, W_embed)
         tmp3, cache3 = rnn_forward(tmp2, tmp1, Wx, Wh, b)
-        tmp4, cache4 = temporal_affine_forward(tmp3, W_vocab, b_vocab)
-
-        loss, dx5 = temporal_softmax_loss(tmp4, captions_out, mask, verbose=False)
-        dtmp4, dW_vocab, db_vocab = temporal_affine_backward(dx5, cache4)
-        dtmp3, dtmp1, dWx, dWh, db = rnn_backward(dtmp4, cache3)
-        dW_embed = word_embedding_backward(dtmp3, cache2)
-        dW_proj = features.T.dot(dtmp1)
-        db_proj = np.sum(dtmp1, axis=0)
-
-        grads['W_embed'] = dW_embed
-        grads['W_vocab'] = dW_vocab
-        grads['b_vocab'] = db_vocab
-        grads['Wx'] = dWx
-        grads['Wh'] = dWh
-        grads['b'] = db
-        grads['W_proj'] = dW_proj
-        grads['b_proj'] = db_proj
+        tmp4, cach34 = temporal_affine_forward(tmp3, W_vocab, b_vocab)
+        tmp5 = temporal_softmax_loss(x, y, mask, verbose=False):
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
@@ -219,20 +204,7 @@ class CaptioningRNN(object):
         # functions; you'll need to call rnn_step_forward or lstm_step_forward in #
         # a loop.                                                                 #
         ###########################################################################
-        vocab_size, wordvec_dim = W_embed.shape
-        N, D = features.shape
-        tmp1 = features.dot(W_proj) + b_proj
-        prev_word = self._start * np.ones((N, 1), dtype=np.int32)
-        print(self._start)
-        print(self._end)
-        for i in range(max_length):
-            captions[:, i] = prev_word.reshape(N)
-            tmp2, cache2 = word_embedding_forward(prev_word, W_embed)
-            tmp3, cache3 = rnn_forward(tmp2, tmp1, Wx, Wh, b)
-            tmp4, cache4 = temporal_affine_forward(tmp3, W_vocab, b_vocab)
-            prev_word = np.argmax(tmp4, axis=2)
-            tmp1 = tmp3.reshape(N, -1)
-
+        pass
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
