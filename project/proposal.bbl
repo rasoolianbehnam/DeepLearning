@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{wang2013properties}
+Zheng Wang, Renzhi Cao, Kristen Taylor, Aaron Briley, Charles Caldwell, and
+  Jianlin Cheng.
+\newblock The properties of genome conformation and spatial gene interaction
+  and regulation networks of normal and malignant human cell types.
+\newblock {\em PloS one}, 8(3):e58793, 2013.
+
+\bibitem{adhikari2016chromosome3d}
+Badri Adhikari, Tuan Trieu, and Jianlin Cheng.
+\newblock Chromosome3d: reconstructing three-dimensional chromosomal structures
+  from hi-c interaction frequency data using distance geometry simulated
+  annealing.
+\newblock {\em BMC genomics}, 17(1):886, 2016.
+
+\bibitem{lieberman2009comprehensive}
+Erez Lieberman-Aiden, Nynke~L Van~Berkum, Louise Williams, Maxim Imakaev,
+  Tobias Ragoczy, Agnes Telling, Ido Amit, Bryan~R Lajoie, Peter~J Sabo,
+  Michael~O Dorschner, et~al.
+\newblock Comprehensive mapping of long-range interactions reveals folding
+  principles of the human genome.
+\newblock {\em science}, 326(5950):289--293, 2009.
+
+\bibitem{prvzulj2007biological}
+Nata{\v{s}}a Pr{\v{z}}ulj.
+\newblock Biological network comparison using graphlet degree distribution.
+\newblock {\em Bioinformatics}, 23(2):e177--e183, 2007.
+
+\bibitem{milenkoviae2008uncovering}
+Tijana Milenkovi{\ae} and Nata{\v{s}}a Pr{\v{z}}ulj.
+\newblock Uncovering biological network function via graphlet degree
+  signatures.
+\newblock {\em Cancer informatics}, 6:257, 2008.
+
+\bibitem{milenkovic2010cancer}
+Tijana Milenkovi{\'c}, Vesna Memi{\v{s}}evi{\'c}, Anand~K Ganesan, and
+  Nata{\v{s}}a Pr{\v{z}}ulj.
+\newblock Systems-level cancer gene identification from protein interaction
+  network topology applied to melanogenesis-related functional genomics data.
+\newblock {\em Journal of the Royal Society Interface}, 7(44):423--437, 2010.
+
+\end{thebibliography}
